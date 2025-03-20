@@ -1,7 +1,7 @@
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.11.11%2B-blue)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Docs](https://github.com/ividal/robustness-scans/actions/workflows/docs.yaml/badge.svg)](https://github.com/ividal/robustness-scans/actions/workflows/docs.yaml/)
 [![Tests](https://github.com/ividal/robustness-scans/actions/workflows/tests.yaml/badge.svg)](https://github.com/ividal/robustness-scans/actions/workflows/tests.yaml/)
@@ -56,7 +56,7 @@ All you need is:
 
 3. Install Python with `uv`:
    ```bash
-   uv python install 3.12.9
+   uv python install 3.11.11
    ```
 
 4. Create a virtual environment and handle dependencies with `uv`:
@@ -143,7 +143,7 @@ The built documentation will be available in the `site` directory.
 
 - **System requirements**:
   - OS: Windows, macOS, or Linux
-  - Python 3.10 or higher
+  - Python 3.11.11 or higher
   - Minimum RAM:
   - Disk space:
 

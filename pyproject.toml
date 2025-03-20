@@ -2,27 +2,24 @@
 requires = ["setuptools>=48", "setuptools_scm[toml]>=6.3.1"]
 build-backend = "setuptools.build_meta"
 
+
 [project]
-name = "blueprint"
+name = "scans"
+description = "Test your app for AI-related vulnerabilities"
 readme = "README.md"
 license = {text = "Apache-2.0"}
-requires-python = ">=3.10"
 dynamic = ["version"]
+requires-python = ">3.11,<3.12"
 dependencies = [
-  "loguru",
-  "streamlit",
-]
-
-[project.optional-dependencies]
-docs = [
-  "mkdocs",
-  "mkdocs-material",
-  "mkdocstrings-python",
-]
-
-tests = [
-  "pytest>=8,<9",
-  "pytest-sugar>=0.9.6",
+    "giskard[llm]>=2.16.2",
+    "jupyterlab>=4.3.6",
+    "langchain>=0.3.21",
+    "langchain-community>=0.3.20",
+    "langchain-mistralai>=0.2.9",
+    "loguru>=0.7.3",
+    "openai>=1.68.2",
+    "pypdf>=5.4.0",
+    "streamlit>=1.43.2",
 ]
 
 [project.urls]
@@ -36,3 +33,20 @@ where = ["src"]
 namespaces = false
 
 [tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[dependency-groups]
+docs = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.9",
+    "mkdocstrings-python>=1.10.7",
+]
+tests = [
+    "pre-commit>=4.2.0",
+    "pytest>=8.3.5",
+    "pytest-sugar>=1.0.0",
+]
