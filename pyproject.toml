@@ -26,9 +26,9 @@ tests = [
 ]
 
 [project.urls]
-Documentation = "https://mozilla-ai.github.io/Blueprint-template/"
-Issues = "https://github.com/mozilla-ai/Blueprint-template/issues"
-Source = "https://github.com/mozilla-ai/Blueprint-template"
+Documentation = "https://ividal.github.io/robustness-scans/"
+Issues = "https://github.com/ividal/robustness-scans/issues"
+Source = "https://github.com/ividal/robustness-scans"
 
 [tool.setuptools.packages.find]
 exclude = ["tests", "tests.*"]
