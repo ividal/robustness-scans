@@ -21,23 +21,23 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Install the latest version of uv and set the python version to 3.11.11
+        uses: astral-sh/setup-uv@v3
         with:
-          python-version: '3.11.11'
+            python-version: 3.11.11
 
-      - name: Install the latest version of uv and set the python version to 3.13t
-        uses: astral-sh/setup-uv@v5
-        with:
-          python-version: 3.11.11
+      - name: Create a virtual environment
+        run: uv venv
 
       - name: Install dependencies with uv
         run: |
-          uv pip install -e .
+          source .venv/bin/activate
+          uv sync
 
       - name: Install test dependencies
         run: |
-          uv pip install -e '.[tests]'
+          source .venv/bin/activate
+          uv sync --group tests
 
       - name: Run tests
         run: |
