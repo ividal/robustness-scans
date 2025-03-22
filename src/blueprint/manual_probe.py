@@ -34,15 +34,15 @@ if __name__ == "__main__":
     # full_report = giskard.scan(giskard_model, giskard_dataset)
 
     html_path = OUTPUT_FOLDER / "scan_report.html"
-    full_report.to_html(html_path, embed=False)
+    full_report.to_html(filename=html_path, embed=True)
     logger.info(f"Exported to {html_path}")
 
     json_path = OUTPUT_FOLDER / "scan_report.json"
-    full_report.to_json(html_path)
+    full_report.to_json(filename=html_path)
     logger.info(f"Exported to {html_path}")
 
     md_path = OUTPUT_FOLDER / "scan_report.md"
-    full_report.to_markdown(md_path, template="huggingface")
+    full_report.to_markdown(filename=md_path, template="huggingface")
     logger.info(f"Exported to {md_path}")
 
     """## Generate comprehensive test suites automatically for your model

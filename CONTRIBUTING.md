@@ -1,4 +1,4 @@
-# Contributing 
+# Contributing
 
 Thank you for your interest in contributing to this repository! This project is meant to show how to probe an LLM application for more than its proficiency at its main task, using Open Source libraries. Specifically, it's meant to show how to probe for AI/LLM-speicific vulnerabilities using Open Source libraries.
 

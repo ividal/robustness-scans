@@ -1,4 +1,3 @@
-
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.11.11%2B-blue)
@@ -10,7 +9,6 @@
 **Repository template courtesy of the [Blueprints Hub](https://developer-hub.mozilla.ai/).**
 
 </div>
-
 
 # How to... Scan an LLM app for vulnerabilities
 
@@ -33,7 +31,7 @@ All you need is:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mozilla-ai/blueprint-template.git
+   git clone https://github.com/ividal/robustness-scans.git
    cd blueprint-template
    ```
 
