@@ -58,6 +58,7 @@ class Chatbot:
             )
             docs = PyPDFLoader(self.pdf).load_and_split(text_splitter)
             db = FAISS.from_documents(docs, self.embeddings)
+            os.makedirs(self.output_folder, exist_ok=True)
             db.save_local(self.output_folder / "vectorstore")
 
             logger.info(
