@@ -1,3 +1,4 @@
+from loguru import logger
 import pytest
 from pathlib import Path
 from giskard import Dataset, Model
@@ -9,7 +10,7 @@ from giskard.testing.tests.llm import (
 from giskard import Dataset, Model
 import pandas as pd
 from blueprint.chatbot import Chatbot
-from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE
+from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE, SAMPLE_VECTORSTORE_PATH
 
 
 @pytest.fixture
@@ -20,14 +21,22 @@ def dataset():
     ]
 
     wrapped_dataset = Dataset(pd.DataFrame({"question": examples}), target=None)
-
-    # testset = QATestset.load("test-set.jsonl")
-    return wrapped_dataset  # .to_dataset()
+    return wrapped_dataset 
 
 
 @pytest.fixture
 def model():
-    chatbot = Chatbot(pdf=IPCC_REPORT_URL, prompt_template=PROMPT_TEMPLATE)
+
+    logger.debug(f"Using {SAMPLE_VECTORSTORE_PATH=}")
+    logger.debug(f"Using {IPCC_REPORT_URL=}")
+    logger.debug(f"Using {PROMPT_TEMPLATE=}")
+
+    chatbot = Chatbot(
+        pdf=IPCC_REPORT_URL,
+        prompt_template=PROMPT_TEMPLATE,
+        local=False,
+        serialized_db_path=Path(SAMPLE_VECTORSTORE_PATH),
+    )
 
     wrapped_model = Model(
         model=chatbot.predict,
