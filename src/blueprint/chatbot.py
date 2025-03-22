@@ -1,6 +1,10 @@
 import os
 from pathlib import Path
 from loguru import logger
+import os
+from pathlib import Path
+from typing import Optional
+
 
 from langchain_mistralai.chat_models import ChatMistralAI
 from langchain_mistralai.embeddings import MistralAIEmbeddings
@@ -15,7 +19,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 import pandas as pd
 
 from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE, OUTPUT_FOLDER
-from typing import Optional
 
 
 class Chatbot:
@@ -29,6 +32,7 @@ class Chatbot:
     ):
         self.pdf = pdf
         self.prompt_template = prompt_template
+        self.output_folder = Path(output_folder)
         if local:
             self.llm = Llamafile()
             self.embeddings = LlamafileEmbeddings()
