@@ -53,4 +53,4 @@ jobs:
         if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
         run: |
           source .venv/bin/activate
-          uv run mkdocs gh-deploy
+          uv run mkdocs gh-deploy --force
