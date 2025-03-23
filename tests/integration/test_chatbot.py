@@ -21,12 +21,11 @@ def dataset():
     ]
 
     wrapped_dataset = Dataset(pd.DataFrame({"question": examples}), target=None)
-    return wrapped_dataset 
+    return wrapped_dataset
 
 
 @pytest.fixture
 def model():
-
     logger.debug(f"Using {SAMPLE_VECTORSTORE_PATH=}")
     logger.debug(f"Using {IPCC_REPORT_URL=}")
     logger.debug(f"Using {PROMPT_TEMPLATE=}")

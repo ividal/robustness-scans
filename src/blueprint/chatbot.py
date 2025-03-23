@@ -25,7 +25,7 @@ class Chatbot:
         pdf: str,
         prompt_template: str,
         local: bool = False,
-        output_folder: Optional[Path] = OUTPUT_FOLDER,
+        output_folder: Path = OUTPUT_FOLDER,
         serialized_db_path: Optional[str] = None,
     ):
         self.pdf = pdf

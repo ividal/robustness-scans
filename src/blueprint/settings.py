@@ -1,7 +1,9 @@
 from pathlib import Path
 
 OUTPUT_FOLDER = Path(__file__).parent.parent.parent / "outputs"
-SAMPLE_VECTORSTORE_PATH = Path(__file__).parent.parent.parent / "sample_data"/"vectorstore"
+SAMPLE_VECTORSTORE_PATH = (
+    Path(__file__).parent.parent.parent / "sample_data" / "vectorstore"
+)
 
 IPCC_REPORT_URL = (
     "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_LongerReport.pdf"

@@ -19,13 +19,13 @@ if __name__ == "__main__":
         feature_names=["question"],
     )
 
-    # Optional: let’s test that the wrapped model works
     examples = [
         "According to the IPCC report, what are key risks in the Europe?",
         # "Is sea level rise avoidable? When will it stop?",
     ]
     giskard_dataset = giskard.Dataset(pd.DataFrame({"question": examples}), target=None)
 
+    # Testing it works...
     answers = giskard_model.predict(giskard_dataset).prediction
     logger.info([f"\n{q}: {a}" for q, a in zip(examples, answers)])
 
@@ -34,15 +34,15 @@ if __name__ == "__main__":
     # full_report = giskard.scan(giskard_model, giskard_dataset)
 
     html_path = OUTPUT_FOLDER / "scan_report.html"
-    full_report.to_html(filename=html_path, embed=True)
+    html = full_report.to_html(filename=html_path, embed=True)
     logger.info(f"Exported to {html_path}")
 
     json_path = OUTPUT_FOLDER / "scan_report.json"
-    full_report.to_json(filename=html_path)
-    logger.info(f"Exported to {html_path}")
+    json_report = full_report.to_json(filename=json_path)
+    logger.info(f"Exported to {json_path}")
 
     md_path = OUTPUT_FOLDER / "scan_report.md"
-    full_report.to_markdown(filename=md_path, template="huggingface")
+    md_report = full_report.to_markdown(filename=md_path, template="huggingface")
     logger.info(f"Exported to {md_path}")
 
     """## Generate comprehensive test suites automatically for your model
