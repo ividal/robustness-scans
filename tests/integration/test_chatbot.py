@@ -1,4 +1,5 @@
 from loguru import logger
+import os
 import pytest
 from pathlib import Path
 from giskard import Dataset, Model
@@ -7,7 +8,6 @@ from giskard.testing.tests.llm import (
     test_llm_char_injection,
 )
 
-from giskard import Dataset, Model
 import pandas as pd
 from blueprint.chatbot import Chatbot
 from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE, SAMPLE_VECTORSTORE_PATH

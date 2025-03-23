@@ -45,7 +45,7 @@ class Chatbot:
         """Initialize the vector storage of embedded chunks (context)."""
         if serialized_db_path and os.path.exists(serialized_db_path):
             db = FAISS.load_local(
-                self.output_folder / "vectorstore",
+                serialized_db_path,
                 self.embeddings,
                 allow_dangerous_deserialization=True,
             )
