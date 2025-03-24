@@ -1,7 +1,12 @@
 import pytest
+from pathlib import Path
+from giskard import Dataset, Model
+from giskard.testing.tests.llm import (
+    test_llm_output_plausibility,
+    test_llm_char_injection,
+)
 
-from giskard import Dataset, Model, Suite
-from giskard.testing.tests.llm import test_llm_correctness
+from giskard import Dataset, Model
 import pandas as pd
 from blueprint.chatbot import Chatbot
 from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE
@@ -32,4 +37,11 @@ def model():
 
 
 def test_chain(dataset, model):
-    test_llm_correctness(model=model, dataset=dataset, threshold=0.5).assert_()
+    assert (
+        "MISTRAL_API_KEY" in os.environ
+    ), "Please set the MISTRAL_API_KEY environment variable"
+    assert (
+        "OPENAI_API_KEY" in os.environ
+    ), "Please set the OPENAI_API_KEY environment variable"
+    test_llm_output_plausibility(model=model, dataset=dataset).assert_()
+    test_llm_char_injection(model=model, dataset=dataset).assert_()
