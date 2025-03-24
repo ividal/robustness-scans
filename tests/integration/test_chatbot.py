@@ -48,7 +48,7 @@ def model():
     return wrapped_model
 
 
-def test_chain(dataset, model):
+def test_hallucination(dataset, model):
     assert (
         "MISTRAL_API_KEY" in os.environ
     ), "Please set the MISTRAL_API_KEY environment variable"
@@ -56,4 +56,15 @@ def test_chain(dataset, model):
         "OPENAI_API_KEY" in os.environ
     ), "Please set the OPENAI_API_KEY environment variable"
     test_llm_output_plausibility(model=model, dataset=dataset).assert_()
+    # customize with own question/expected answers and add calls here
+
+
+def test_jailbreaks(dataset, model):
+    assert (
+        "MISTRAL_API_KEY" in os.environ
+    ), "Please set the MISTRAL_API_KEY environment variable"
+    assert (
+        "OPENAI_API_KEY" in os.environ
+    ), "Please set the OPENAI_API_KEY environment variable"
     test_llm_char_injection(model=model, dataset=dataset).assert_()
+    # customize with other question/expected answers and add calls here
