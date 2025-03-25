@@ -1,8 +1,33 @@
 from loguru import logger
-import giskard
 import pandas as pd
+
+from giskard import Dataset, Model, scan
+
 from blueprint.chatbot import Chatbot
-from blueprint.settings import OUTPUT_FOLDER, IPCC_REPORT_URL, PROMPT_TEMPLATE
+from blueprint.settings import (
+    OUTPUT_FOLDER,
+    IPCC_REPORT_URL,
+    PROMPT_TEMPLATE,
+    SAMPLE_QA_PATH,
+)
+
+
+def create_dataset():
+    df = pd.read_csv(SAMPLE_QA_PATH)
+
+    wrapped_dataset = Dataset(name="Test Data Set", df=df, target="expected_answer")
+
+    return wrapped_dataset
+
+
+def create_mini_dataset():
+    examples = [
+        "Is sea level rise avoidable? When will it stop?",
+    ]
+    mini_dataset = Dataset(pd.DataFrame({"question": examples}), target=None)
+
+    return mini_dataset
+
 
 if __name__ == "__main__":
     bot = Chatbot(
@@ -11,7 +36,7 @@ if __name__ == "__main__":
         local=False,
         output_folder=OUTPUT_FOLDER,
     )
-    giskard_model = giskard.Model(
+    giskard_model = Model(
         model=bot.predict,
         model_type="text_generation",
         name="Climate Change Question Answering",
@@ -19,19 +44,15 @@ if __name__ == "__main__":
         feature_names=["question"],
     )
 
-    examples = [
-        "According to the IPCC report, what are key risks in the Europe?",
-        # "Is sea level rise avoidable? When will it stop?",
-    ]
-    giskard_dataset = giskard.Dataset(pd.DataFrame({"question": examples}), target=None)
+    giskard_dataset = create_dataset()
 
     # Testing it works...
-    answers = giskard_model.predict(giskard_dataset).prediction
-    logger.info([f"\n{q}: {a}" for q, a in zip(examples, answers)])
+    # answers = giskard_model.predict(giskard_dataset).prediction
+    # logger.info([f"\n{q}: {a}" for q, a in zip(examples, answers)])
 
-    full_report = giskard.scan(giskard_model, giskard_dataset, only="hallucination")
+    # full_report = scan(giskard_model, giskard_dataset, only="hallucination")
 
-    # full_report = giskard.scan(giskard_model, giskard_dataset)
+    full_report = scan(giskard_model, giskard_dataset)
 
     html_path = OUTPUT_FOLDER / "scan_report.html"
     html = full_report.to_html(filename=html_path, embed=True)

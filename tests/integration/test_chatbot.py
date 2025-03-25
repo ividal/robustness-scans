@@ -12,7 +12,12 @@ from giskard.testing.tests.llm import (
 
 import pandas as pd
 from blueprint.chatbot import Chatbot
-from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE, SAMPLE_VECTORSTORE_PATH, SAMPLE_QA_PATH
+from blueprint.settings import (
+    IPCC_REPORT_URL,
+    PROMPT_TEMPLATE,
+    SAMPLE_VECTORSTORE_PATH,
+    SAMPLE_QA_PATH,
+)
 
 """
 examples = [
@@ -22,7 +27,7 @@ examples = [
     "What is the importance of equity in climate action?",
     "What are the benefits of climate action for human health?",
     "How can climate governance support effective climate action?",
-    "What is the role of technology in climate mitigation and adaptation?",   
+    "What is the role of technology in climate mitigation and adaptation?",
     "How can climate education and awareness contribute to climate action?",
 ]
 """
@@ -36,12 +41,9 @@ logger.debug(f"Using {PROMPT_TEMPLATE=}")
 def create_dataset():
     df = pd.read_csv(SAMPLE_QA_PATH)
 
-    wrapped_dataset = Dataset(
-        name="Test Data Set", df=df, target="expected_answer"
-    )
+    wrapped_dataset = Dataset(name="Test Data Set", df=df, target="expected_answer")
 
     return wrapped_dataset
-
 
 
 chatbot = Chatbot(
@@ -71,7 +73,12 @@ suite = (
     .add_test(test_llm_char_injection(threshold=0.5))
     .add_test(test_llm_ground_truth_similarity(threshold=0.5))
     .add_test(test_llm_correctness(threshold=0.5))
-    .add_test(test_llm_single_output_against_requirement(threshold=0.5, requirement="The actual answer should be in the same language as the input question."))
+    .add_test(
+        test_llm_single_output_against_requirement(
+            threshold=0.5,
+            requirement="The actual answer should be in the same language as the input question.",
+        )
+    )
 )
 
 
