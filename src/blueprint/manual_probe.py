@@ -44,7 +44,7 @@ if __name__ == "__main__":
         feature_names=["question"],
     )
 
-    giskard_dataset = create_dataset()
+    giskard_dataset = create_mini_dataset()
 
     # Testing it works...
     # answers = giskard_model.predict(giskard_dataset).prediction
@@ -52,9 +52,11 @@ if __name__ == "__main__":
 
     # full_report = scan(giskard_model, giskard_dataset, only="hallucination")
 
+    html_path = OUTPUT_FOLDER / "scan_report.html"
+    logger.info(f"Will export to {html_path}")
+
     full_report = scan(giskard_model, giskard_dataset)
 
-    html_path = OUTPUT_FOLDER / "scan_report.html"
     html = full_report.to_html(filename=html_path, embed=True)
     logger.info(f"Exported to {html_path}")
 
