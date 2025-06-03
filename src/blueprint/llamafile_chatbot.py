@@ -1,12 +1,14 @@
 import os
+
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
-from langchain_community.llms import Llamafile
-from langchain_community.embeddings import LlamafileEmbeddings
-from langchain_community.vectorstores import FAISS
-from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.embeddings import LlamafileEmbeddings
+from langchain_community.llms import Llamafile
+from langchain_community.vectorstores import FAISS
 from loguru import logger
+
 from blueprint.settings import IPCC_REPORT_URL, OUTPUT_FOLDER
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)

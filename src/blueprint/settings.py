@@ -5,7 +5,7 @@ SAMPLE_VECTORSTORE_PATH = (
     Path(__file__).parent.parent.parent / "sample_data" / "vectorstore"
 )
 SAMPLE_QA_PATH = (
-    Path(__file__).parent.parent.parent / "sample_data" / "synthetic_dataset.csv"
+    Path(__file__).parent.parent.parent / "sample_data" / "synthetic_test_dataset.csv"
 )
 
 IPCC_REPORT_URL = (

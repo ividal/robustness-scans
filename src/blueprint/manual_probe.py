@@ -1,15 +1,10 @@
-from loguru import logger
 import pandas as pd
-
 from giskard import Dataset, Model, scan
+from loguru import logger
 
 from blueprint.chatbot import Chatbot
-from blueprint.settings import (
-    OUTPUT_FOLDER,
-    IPCC_REPORT_URL,
-    PROMPT_TEMPLATE,
-    SAMPLE_QA_PATH,
-)
+from blueprint.settings import (IPCC_REPORT_URL, OUTPUT_FOLDER,
+                                PROMPT_TEMPLATE, SAMPLE_QA_PATH)
 
 
 def create_dataset():

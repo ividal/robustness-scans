@@ -1,7 +1,8 @@
 import streamlit as st
-from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE, OUTPUT_FOLDER
 from loguru import logger
+
 from blueprint.chatbot import Chatbot
+from blueprint.settings import IPCC_REPORT_URL, OUTPUT_FOLDER, PROMPT_TEMPLATE
 
 st.title("Blueprint Demo")
 
