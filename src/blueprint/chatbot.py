@@ -1,22 +1,20 @@
-from loguru import logger
 import os
 from pathlib import Path
 from typing import Optional
 
-
-from langchain_mistralai.chat_models import ChatMistralAI
-from langchain_mistralai.embeddings import MistralAIEmbeddings
+import pandas as pd
 from langchain.chains import RetrievalQA
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
-from langchain_community.llms.llamafile import Llamafile
 from langchain_community.embeddings import LlamafileEmbeddings
+from langchain_community.llms.llamafile import Llamafile
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_mistralai.chat_models import ChatMistralAI
+from langchain_mistralai.embeddings import MistralAIEmbeddings
+from loguru import logger
 
-import pandas as pd
-
-from blueprint.settings import IPCC_REPORT_URL, PROMPT_TEMPLATE, OUTPUT_FOLDER
+from blueprint.settings import IPCC_REPORT_URL, OUTPUT_FOLDER, PROMPT_TEMPLATE
 
 
 class Chatbot:
@@ -86,7 +84,7 @@ class Chatbot:
         Returns:
             A list of model outputs, one for each row in the DataFrame.
         """
-        return [self.chain.invoke({"query": question}) for question in df["question"]]
+        return [self.chain.invoke({"query": question})["result"] for question in df["question"]]
 
 
 if __name__ == "__main__":
