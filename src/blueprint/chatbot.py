@@ -84,7 +84,10 @@ class Chatbot:
         Returns:
             A list of model outputs, one for each row in the DataFrame.
         """
-        return [self.chain.invoke({"query": question})["result"] for question in df["question"]]
+        return [
+            self.chain.invoke({"query": question})["result"]
+            for question in df["question"]
+        ]
 
 
 if __name__ == "__main__":

@@ -19,6 +19,7 @@ dependencies = [
     "langchain-mistralai>=0.2.9",
     "loguru>=0.7.3",
     "openai>=1.68.2",
+    "pre-commit>=4.2.0",
     "pypdf>=5.4.0",
     "pytest>=8.4.0",
     "ruff>=0.11.12",

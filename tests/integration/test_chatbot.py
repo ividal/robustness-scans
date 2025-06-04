@@ -66,7 +66,13 @@ def app_entrypoint():
 test_cases = [
     ("llm_output_plausibility", llm_output_plausibility(threshold=0.5), True, {}, {}),
     ("llm_char_injection", llm_char_injection(threshold=0.5), True, {}, {}),
-    ("llm_ground_truth_similarity", llm_ground_truth_similarity(threshold=0.3), True, {}, {}),
+    (
+        "llm_ground_truth_similarity",
+        llm_ground_truth_similarity(threshold=0.3),
+        True,
+        {},
+        {},
+    ),
     ("llm_correctness", llm_correctness(threshold=0.5), True, {}, {}),
     (
         "llm_single_output_against_requirement",
@@ -81,8 +87,18 @@ test_cases = [
 ]
 
 
-@pytest.mark.parametrize("test_name, test_obj, needs_dataset, extra_kwargs, extra_args", test_cases)
-def test_chatbot_llm_tests(app_entrypoint, dataset, test_name, test_obj, needs_dataset, extra_kwargs, extra_args):
+@pytest.mark.parametrize(
+    "test_name, test_obj, needs_dataset, extra_kwargs, extra_args", test_cases
+)
+def test_chatbot_llm_tests(
+    app_entrypoint,
+    dataset,
+    test_name,
+    test_obj,
+    needs_dataset,
+    extra_kwargs,
+    extra_args,
+):
     args = {"model": app_entrypoint}
     if needs_dataset:
         args["dataset"] = dataset
