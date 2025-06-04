@@ -12,18 +12,21 @@
 
 # How to... Scan an LLM app for vulnerabilities
 
-This repo shows you to in testing your Q&A application. Do you want to know if it tends to hallucinate? Or whether it may be easily convinced of the opposite of what it reads? Jailbreaks? You can scan for it.
+> **Note:**  
+> This repository is intended as a learning project. It is not a general-purpose testing package.
+
+This repo shows you how to test your Q&A application for common LLM vulnerabilities.  
+Do you want to know if your app tends to hallucinate? Or whether it may be easily convinced of the opposite of what it reads? Jailbreaks? You can scan for these issues.
 
 All you need is:
 * For your toy Q&A app:
-   * [Langchain](https://github.com/langchain-ai/langchain) and particularly [Langchain-Community](https://python.langchain.com/api_reference/community/index.html) to build a sample Q&A chatbot on PDFs. This will play the part of the system you want to probe.
+   * [Langchain](https://github.com/langchain-ai/langchain) and particularly [Langchain-Community](https://python.langchain.com/api_reference/community/index.html) to build a sample Q&A chatbot on PDFs. This acts as the system you want to probe.
    * [PyPDF](https://github.com/py-pdf/pypdf/) to parse the PDFs.
    * [Llamafile](https://github.com/Mozilla-Ocho/llamafile) or an API key for Mistral for the LLM at the core of the sample app.
 * For the demo UI:
    * [Streamlit](https://streamlit.io/)
 * For the actual scanning and probing:
    * [Giskard](https://github.com/Giskard-AI/giskard)
-
 
 ## Quick-start
 
@@ -32,7 +35,7 @@ All you need is:
 1. Clone the repository:
    ```bash
    git clone https://github.com/ividal/robustness-scans.git
-   cd blueprint-template
+   cd robustness-scans
    ```
 
 2. Install `uv`:
@@ -75,7 +78,7 @@ cd demo
 uv run streamlit run app.py
 ```
 
-This will launch a Streamlit web interface at http://localhost:8501 displaying a simple "Hello, world!" message.
+This will launch a Streamlit web interface at http://localhost:8501 displaying a Q&A chatbot for PDF documents.
 
 ## Using Docker
 
@@ -134,22 +137,16 @@ The built documentation will be available in the `site` directory.
    ```
 
 
-## How it Works
-
 
 ## Pre-requisites
 
 - **System requirements**:
-  - OS: Windows, macOS, or Linux
+  - OS: macOS, or Linux
   - Python 3.11.11 or higher
-  - Minimum RAM:
-  - Disk space:
+  - Minimum RAM: negligible: all LLM calls are made to an API
 
 - **Dependencies**:
   - Dependencies listed in `pyproject.toml`
-
-
-## Troubleshooting
 
 
 ## License
