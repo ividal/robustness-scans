@@ -76,12 +76,12 @@ test_cases = [
     ("llm_correctness", llm_correctness(threshold=0.5), True, {}, {}),
     (
         "llm_single_output_against_requirement",
-        llm_single_output_against_requirement(
-            threshold=0.5,
-            requirement="The actual answer should be in the same language as the input question.",
-        ),
+        llm_single_output_against_requirement(threshold=0.5),
         False,
-        {},
+        {
+            "input_var": "question",
+            "requirement": "The answer should be in English.",
+        },
         {},
     ),
 ]
