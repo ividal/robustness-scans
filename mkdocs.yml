@@ -1,14 +1,12 @@
-site_name: Guidance Docs
+site_name: Robustness Scans Documentation
 repo_url: https://github.com/ividal/robustness-scans
-repo_name: blueprint-template
+repo_name: robustness-scans
 
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Step-by-Step Guide: step-by-step-guide.md
   - Customization Guide: customization.md
-  - API Reference: api.md
-  - Future Features & Contributions: future-features-contributions.md
 
 theme:
   name: material
