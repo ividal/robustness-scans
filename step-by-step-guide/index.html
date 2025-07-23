@@ -12,7 +12,7 @@
         <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../api/">
+        <link rel="next" href="../customization/">
       
       
       <link rel="icon" href="../images/Blueprint-logo-black-flavicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Step-by-Step Guide - Guidance Docs</title>
+        <title>Step-by-Step Guide - Robustness Scans Documentation</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#step-by-step-guide-how-this-blueprint-works" class="md-skip">
+        <a href="#step-by-step-guide-how-vulnerability-scanning-works" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Guidance Docs" class="md-header__button md-logo" aria-label="Guidance Docs" data-md-component="logo">
+    <a href=".." title="Robustness Scans Documentation" class="md-header__button md-logo" aria-label="Robustness Scans Documentation" data-md-component="logo">
       
   <img src="../images/Blueprint-logo-white.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Guidance Docs
+            Robustness Scans Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -195,7 +195,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    blueprint-template
+    robustness-scans
   </div>
 </a>
       </div>
@@ -225,12 +225,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Guidance Docs" class="md-nav__button md-logo" aria-label="Guidance Docs" data-md-component="logo">
+    <a href=".." title="Robustness Scans Documentation" class="md-nav__button md-logo" aria-label="Robustness Scans Documentation" data-md-component="logo">
       
   <img src="../images/Blueprint-logo-white.png" alt="logo">
 
     </a>
-    Guidance Docs
+    Robustness Scans Documentation
   </label>
   
     <div class="md-nav__source">
@@ -240,7 +240,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
-    blueprint-template
+    robustness-scans
   </div>
 </a>
     </div>
@@ -357,45 +357,168 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
+  <a href="#step-1-setting-up-the-test-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1
+      Step 1: Setting Up the Test Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Setting Up the Test Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-sample-qa-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Sample Q&amp;A Application
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2
+      1.2 Configuration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#customizing-the-blueprint" class="md-nav__link">
+  <a href="#step-2-running-vulnerability-scans" class="md-nav__link">
     <span class="md-ellipsis">
-      🎨 Customizing the Blueprint
+      Step 2: Running Vulnerability Scans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Running Vulnerability Scans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-giskard-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Giskard Integration
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scan-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Scan Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-test-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Test Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#contributing-to-the-blueprint" class="md-nav__link">
+  <a href="#step-3-analyzing-results" class="md-nav__link">
     <span class="md-ellipsis">
-      🤝 Contributing to the Blueprint
+      Step 3: Analyzing Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Analyzing Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-scan-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Scan Reports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-report-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Report Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-understanding-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Understanding Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-customization-and-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Customization and Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Customization and Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-adapting-to-your-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Adapting to Your Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-local-model-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Local Model Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Integration Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-scanning-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Customizing the Scanning System
     </span>
   </a>
   
@@ -416,56 +539,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../customization.md" class="md-nav__link">
+      <a href="../customization/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Customization Guide
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    API Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../future-features-contributions.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Future Features & Contributions
     
   </span>
   
@@ -511,45 +590,168 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
+  <a href="#step-1-setting-up-the-test-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1
+      Step 1: Setting Up the Test Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Setting Up the Test Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-sample-qa-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Sample Q&amp;A Application
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2
+      1.2 Configuration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#customizing-the-blueprint" class="md-nav__link">
+  <a href="#step-2-running-vulnerability-scans" class="md-nav__link">
     <span class="md-ellipsis">
-      🎨 Customizing the Blueprint
+      Step 2: Running Vulnerability Scans
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Running Vulnerability Scans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-giskard-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Giskard Integration
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scan-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Scan Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-test-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Test Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#contributing-to-the-blueprint" class="md-nav__link">
+  <a href="#step-3-analyzing-results" class="md-nav__link">
     <span class="md-ellipsis">
-      🤝 Contributing to the Blueprint
+      Step 3: Analyzing Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Analyzing Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-scan-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Scan Reports
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-report-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Report Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-understanding-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Understanding Results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-customization-and-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Customization and Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Customization and Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-adapting-to-your-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Adapting to Your Application
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-local-model-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Local Model Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-integration-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Integration Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-scanning-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Customizing the Scanning System
     </span>
   </a>
   
@@ -574,17 +776,99 @@
   
 
 
-<h1 id="step-by-step-guide-how-this-blueprint-works"><strong>Step-by-Step Guide: How this Blueprint Works</strong></h1>
+<h1 id="step-by-step-guide-how-vulnerability-scanning-works"><strong>Step-by-Step Guide: How Vulnerability Scanning Works</strong></h1>
+<p>This guide walks you through the complete workflow of testing your LLM application for vulnerabilities using the Robustness Scans toolkit.</p>
 <hr />
 <h2 id="overview"><strong>Overview</strong></h2>
+<p>The Robustness Scans system consists of several key components:</p>
+<ol>
+<li><strong>Sample Q&amp;A Application</strong>: A Langchain-based chatbot that answers questions about climate change using the IPCC report</li>
+<li><strong>Vulnerability Scanner</strong>: Giskard-powered tools for detecting common LLM vulnerabilities</li>
+<li><strong>Report Generation</strong>: Generation of detailed scan reports in multiple formats</li>
+</ol>
+<p>The system works by:
+- Setting up a controlled test environment with a climate change Q&amp;A chatbot
+- Running various adversarial tests and probes using Giskard
+- Analyzing responses for potential vulnerabilities
+- Generating comprehensive reports with actionable insights</p>
 <hr />
-<h2 id="step-1"><strong>Step 1</strong></h2>
-<h2 id="step-2"><strong>Step 2</strong></h2>
-<h2 id="step-3"><strong>Step 3</strong></h2>
-<h2 id="customizing-the-blueprint">🎨 <strong>Customizing the Blueprint</strong></h2>
-<p>To better understand how you can tailor this Blueprint to suit your specific needs, please visit the <strong><a href="customization.md">Customization Guide</a></strong>.</p>
-<h2 id="contributing-to-the-blueprint">🤝 <strong>Contributing to the Blueprint</strong></h2>
-<p>Want to help improve or extend this Blueprint? Check out the <strong><a href="future-features-contributions.md">Future Features &amp; Contributions Guide</a></strong> to see how you can contribute your ideas, code, or feedback to make this Blueprint even better!</p>
+<h2 id="step-1-setting-up-the-test-environment"><strong>Step 1: Setting Up the Test Environment</strong></h2>
+<h3 id="11-sample-qa-application"><strong>1.1 Sample Q&amp;A Application</strong></h3>
+<p>The repository includes a sample Q&amp;A chatbot built with:
+- <strong>Langchain</strong>: For the core chatbot functionality using RetrievalQA
+- <strong>Langchain-Community</strong>: For document loading and vector storage
+- <strong>PyPDF</strong>: For parsing the IPCC PDF report
+- <strong>Mistral AI</strong>: As the underlying LLM (via API)
+- <strong>FAISS</strong>: For vector storage and similarity search</p>
+<h3 id="12-configuration"><strong>1.2 Configuration</strong></h3>
+<p>The application is configured through constants in <code>settings.py</code>:
+- <code>IPCC_REPORT_URL</code>: URL to the IPCC climate change report
+- <code>PROMPT_TEMPLATE</code>: Template for the climate assistant prompt
+- <code>OUTPUT_FOLDER</code>: Directory for storing outputs and reports
+- <code>SAMPLE_QA_PATH</code>: Path to sample Q&amp;A dataset</p>
+<hr />
+<h2 id="step-2-running-vulnerability-scans"><strong>Step 2: Running Vulnerability Scans</strong></h2>
+<h3 id="21-giskard-integration"><strong>2.1 Giskard Integration</strong></h3>
+<p>The system uses Giskard for vulnerability scanning:
+- <strong>Model Wrapping</strong>: The chatbot is wrapped as a Giskard Model
+- <strong>Dataset Creation</strong>: Test questions are organized into Giskard Datasets
+- <strong>Scan Execution</strong>: Giskard's scan function runs comprehensive vulnerability tests</p>
+<h3 id="22-scan-process"><strong>2.2 Scan Process</strong></h3>
+<p>The scanning process includes:
+- <strong>Hallucination Detection</strong>: Tests if the LLM generates false information about climate change
+- <strong>Adversarial Testing</strong>: Probes for various types of vulnerabilities
+- <strong>Robustness Assessment</strong>: Evaluates how well the application handles different inputs</p>
+<h3 id="23-test-data"><strong>2.3 Test Data</strong></h3>
+<p>The system uses:
+- <strong>Sample Questions</strong>: Pre-defined climate change questions for testing
+- <strong>Expected Answers</strong>: Reference answers for comparison
+- <strong>Mini Dataset</strong>: A small set of questions for quick testing</p>
+<hr />
+<h2 id="step-3-analyzing-results"><strong>Step 3: Analyzing Results</strong></h2>
+<h3 id="31-scan-reports"><strong>3.1 Scan Reports</strong></h3>
+<p>The system generates multiple report formats:
+- <strong>HTML Reports</strong>: Interactive web-based reports (<code>scan_report.html</code>)
+- <strong>JSON Reports</strong>: Machine-readable data (<code>scan_report.json</code>)
+- <strong>Markdown Reports</strong>: Human-readable summaries (<code>scan_report.md</code>)</p>
+<h3 id="32-report-location"><strong>3.2 Report Location</strong></h3>
+<p>All reports are saved to the <code>outputs/</code> directory:
+- <code>outputs/scan_report.html</code>
+- <code>outputs/scan_report.json</code>
+- <code>outputs/scan_report.md</code></p>
+<h3 id="33-understanding-results"><strong>3.3 Understanding Results</strong></h3>
+<p>Reports include:
+- Vulnerability scores and assessments
+- Specific test cases that triggered issues
+- Recommendations for improvement
+- Detailed analysis of model behavior</p>
+<hr />
+<h2 id="step-4-customization-and-integration"><strong>Step 4: Customization and Integration</strong></h2>
+<h3 id="41-adapting-to-your-application"><strong>4.1 Adapting to Your Application</strong></h3>
+<p>The scanning tools can be customized for:
+- Different PDF documents (modify <code>IPCC_REPORT_URL</code>)
+- Custom prompt templates (modify <code>PROMPT_TEMPLATE</code>)
+- Different LLM providers (modify chatbot initialization)
+- Specific use cases (modify test questions)</p>
+<h3 id="42-local-model-support"><strong>4.2 Local Model Support</strong></h3>
+<p>The system supports local models through Llamafile:
+- Use <code>local=True</code> in Chatbot initialization
+- Configure Llamafile endpoint URL
+- Use local embeddings for document processing</p>
+<h3 id="43-integration-examples"><strong>4.3 Integration Examples</strong></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Custom document</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">chatbot</span> <span class="o">=</span> <span class="n">Chatbot</span><span class="p">(</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">pdf</span><span class="o">=</span><span class="s2">&quot;path/to/your/document.pdf&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">prompt_template</span><span class="o">=</span><span class="s2">&quot;Your custom prompt template&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">local</span><span class="o">=</span><span class="kc">False</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Custom test questions</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">custom_questions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Your question 1&quot;</span><span class="p">,</span> <span class="s2">&quot;Your question 2&quot;</span><span class="p">]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="n">custom_questions</span><span class="p">}),</span> <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="customizing-the-scanning-system">🎨 <strong>Customizing the Scanning System</strong></h2>
+<p>To better understand how you can tailor the scanning parameters to suit your specific LLM application, please visit the <strong><a href="../customization/">Customization Guide</a></strong>.</p>
 
 
 
